@@ -1,1 +1,1 @@
-# AttendMe_Smart_Attendance_System
+# LibraLink_Smart Attendance System with Book Recommender

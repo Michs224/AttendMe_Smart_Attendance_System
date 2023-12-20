@@ -26,7 +26,7 @@ Follow these steps to set up and run LibraLink on your system.
       2. Python Libraries: opencv-python, tkinter, pandas, numpy, etc.
       3. Installation Steps
       4. Clone the repository using git:
-         git clone [Repository URL]
+         git clone https://github.com/Michs224/LibraLink_Smart_Attendance_System_with_Book_Recommendation
       5. Install the necessary dependencies:
          pip install -r requirements.txt
       6. Launch the application:

@@ -7,7 +7,7 @@
 ![image](https://github.com/Michs224/LibraLink_Smart_Attendance_System_with_Book_Recommendation/assets/128117104/0ea6aac3-f341-47cc-9336-b4b09734cac5)
 
 ## Description
-LibraLink is a cutting-edge attendance system integrated with a book recommendation feature, designed specifically for library environments. The core of this system is a robust facial recognition-based attendance mechanism, powered by Convolutional Neural Networks (CNN). Additionally, it offers a personalized book recommendation service utilizing the K-Nearest Neighbors (KNN) algorithm to cater to user preferences.
+LibraLink is an advanced attendance system integrated with a book recommendation feature, specifically designed for library environments. At its core lies a robust facial recognition-based attendance mechanism, powered by Convolutional Neural Networks (CNN). In addition to tracking attendance, the system offers a personalized book recommendation service, leveraging the K-Nearest Neighbors (KNN) algorithm to align with user preferences.
 
 ## Key Features
 Facial Recognition-Based Attendance System: Utilizes advanced CNN models for accurate and efficient attendance tracking through face recognition.

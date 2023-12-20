@@ -21,21 +21,20 @@ User-Friendly Interface: An intuitive and easy-to-use interface, facilitating ef
 - Data Processing and Management: Pandas, NumPy
 ## Installation
 Follow these steps to set up and run LibraLink on your system.
-
   ### Prerequisites
-  1. Python 3.x
-  2. Python Libraries: opencv-python, tkinter, pandas, numpy, etc.
-  3. Installation Steps
-  4. Clone the repository using git:
-     git clone [Repository URL]
-  5. Install the necessary dependencies:
-     pip install -r requirements.txt
-  6. Launch the application:
-     python Main.py
+      1. Python 3.x
+      2. Python Libraries: opencv-python, tkinter, pandas, numpy, etc.
+      3. Installation Steps
+      4. Clone the repository using git:
+         git clone [Repository URL]
+      5. Install the necessary dependencies:
+         pip install -r requirements.txt
+      6. Launch the application:
+         python Main.py
   ### Usage
-  1. Launch the LibraLink application.
-  2. Follow the on-screen instructions for facial registration and attendance logging.
-  3. Utilize the book recommendation feature to discover books tailored to your interests.
+      1. Launch the LibraLink application.
+      2. Follow the on-screen instructions for facial registration and attendance logging.
+      3. Utilize the book recommendation feature to discover books tailored to your interests.
 ## Contributing
 Your contributions are what make the open-source community an incredible place to learn, inspire, and create. We welcome any contributions to improve LibraLink.
 Feel free to fork the repository, create a pull request with your improvements, or open an issue tagged as "enhancement".

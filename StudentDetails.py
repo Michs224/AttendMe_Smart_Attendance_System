@@ -384,7 +384,7 @@ def Student_Details(root):
             show_custom_error("All fields are required!")
         elif var_dob.get() not in["None",""] and not is_valid_date(var_dob.get()):
             show_custom_error("Date of Birth must be in YYYY-MM-DD format!")
-        elif not is_valid_phone(var_phone.get()):
+        elif var_phone.get() not in["None",""] and not is_valid_phone(var_phone.get()):
             show_custom_error('Phone number must start with "62"')            
         else:
             try:
@@ -588,7 +588,7 @@ def Student_Details(root):
             show_custom_error("All fields are required!")
         elif var_dob.get() not in["None",""] and not is_valid_date(var_dob.get()):
             show_custom_error("Date of Birth must be in YYYY-MM-DD format!")
-        elif not is_valid_phone(var_phone.get()):
+        elif var_phone.get() not in["None",""] and not is_valid_phone(var_phone.get()):
             show_custom_error('Phone number must start with "62"')
         else:
             askConfirmation("Do you want to update this student data?")
@@ -728,7 +728,7 @@ def Student_Details(root):
                 show_custom_error("All fields are required!")
             elif var_dob.get() not in["None",""] and not is_valid_date(var_dob.get()):
                 show_custom_error("Date of Birth must be in YYYY-MM-DD format!") 
-            elif not is_valid_phone(var_phone.get()):
+            elif var_phone.get() not in["None",""] and not is_valid_phone(var_phone.get()):
                 show_custom_error('Phone number must start with "62"')   
             else:
                 try:

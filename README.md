@@ -29,7 +29,9 @@ Follow these steps to set up and run LibraLink on your system.
          git clone https://github.com/Michs224/LibraLink_Smart_Attendance_System_with_Book_Recommendation
       5. Install the necessary dependencies:
          pip install -r requirements.txt
-      6. Launch the application:
+      6. Run the MySQL Database with tools, such as XAMPP, etc. 
+      7. Import the attendance database from the LibraLink Student Database folder.
+      8. Launch the application:
          python Main.py
   ### Usage
       1. Launch the LibraLink application.

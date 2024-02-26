@@ -11,52 +11,52 @@ def to_images(str):
 
 def Take_Attendance_Students(root):
     
-    root.geometry("2560x1600")
+    root.geometry("1920x1080")
     root.configure(bg = "#FEFFF2")
     root.title("LibraLink: Take Attendance Students")
 
 
-    canvas = Canvas(root,bg = "#FEFFF2",height = 1600,width = 2560,bd = 0,highlightthickness = 0,relief = "ridge")
+    canvas = Canvas(root,bg = "#FEFFF2",height = 1080,width = 1920,bd = 0,highlightthickness = 0,relief = "ridge")
 
     canvas.place(x = 0, y = 0)
 
     image_image_1 = PhotoImage(file=to_images("image_logo.png"))
-    image_1 = canvas.create_image(2351.0,170.0,image=image_image_1)
+    image_1 = canvas.create_image(1694.0,150.0,image=image_image_1)
 
     image_image_2 = PhotoImage(file=to_images("image_2.png"))
-    image_2 = canvas.create_image(2010.0,944.0,image=image_image_2)
+    image_2 = canvas.create_image(1423.0,516.0,image=image_image_2)
 
-    canvas.create_rectangle(2121.0,34.0,2129.0,242.0,fill="#EF16A5",outline="")
+    canvas.create_rectangle(1499.0,40.0,1509.0,200.0,fill="#EF16A5",outline="")
 
-    canvas.create_text(1462.0,95.0,anchor="nw",text="DASHBOARD",fill="#000000",font=("RobotoRoman Bold", 90 * -1))
+    canvas.create_text(950.0,83.0,anchor="nw",text="DASHBOARD",fill="#000000",font=("RobotoRoman Bold", 60 * -1))
 
     image_image_3 = PhotoImage(file=to_images("image_3.png"))
-    image_3 = canvas.create_image(700.0,244.91162109375,image=image_image_3)
+    image_3 = canvas.create_image(424.0,118.0,image=image_image_3)
 
 
 
     image_image_4 = PhotoImage(file=to_images("image_4.png"))
-    image_4 = canvas.create_image(1227.0,138.0,image=image_image_4)
+    image_4 = canvas.create_image(719.0,62.0,image=image_image_4)
     canvas.tag_bind(image_4, '<Enter>', lambda event, img=image_4 :on_image_enter(img))
     canvas.tag_bind(image_4, '<Leave>', lambda event, img=image_4 :on_image_leave(img))
     canvas.tag_bind(image_4, '<Button-1>', lambda event, img=image_4: on_image_click(img))
 
     image_image_5 = PhotoImage(file=to_images("image_5.png"))
-    image_5 = canvas.create_image(419.0,799.0,image=image_image_5)
+    image_5 = canvas.create_image(319.0,493.0,image=image_image_5)
     canvas.tag_bind(image_5, '<Enter>', lambda event, img=image_5 :on_image_enter(img))
     canvas.tag_bind(image_5, '<Leave>', lambda event, img=image_5 :on_image_leave(img))
     canvas.tag_bind(image_5, '<Button-1>', lambda event, img=image_5: on_image_click(img))
 
 
     image_image_6 = PhotoImage(file=to_images("image_6.png"))
-    image_6 = canvas.create_image(753.0,1310.0,image=image_image_6)
+    image_6 = canvas.create_image(540.0,815.0,image=image_image_6)
     canvas.tag_bind(image_6, '<Enter>', lambda event, img=image_6 :on_image_enter(img))
     canvas.tag_bind(image_6, '<Leave>', lambda event, img=image_6 :on_image_leave(img))
     canvas.tag_bind(image_6, '<Button-1>', lambda event, img=image_6: on_image_click(img))
 
 
     image_image_7 = PhotoImage(file=to_images("image_7.png"))
-    image_7 = canvas.create_image(1090.0,799.0,image=image_image_7)
+    image_7 = canvas.create_image(773.0,493.0,image=image_image_7)
     canvas.tag_bind(image_7, '<Enter>', lambda event, img=image_7 :on_image_enter(img))
     canvas.tag_bind(image_7, '<Leave>', lambda event, img=image_7 :on_image_leave(img))
     canvas.tag_bind(image_7, '<Button-1>', lambda event, img=image_7: on_image_click(img))   

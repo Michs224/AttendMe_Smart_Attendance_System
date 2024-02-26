@@ -14,159 +14,160 @@ def to_images(str):
 
 def Student_Details(root):
     # window = root
-    Entry_font=Font(family="Bahnschrift SemiLight",size=16)
+    Entry_font=Font(family="Bahnschrift SemiLight",size=14)
     
-    root.geometry("2560x1600")
+    root.geometry("1920x1080")
     root.configure(bg = "#FDFFE8")
     root.title("LibraLink: Student Details")
 
-    canvas = Canvas(root,bg = "#FDFFE8",height = 1600,width = 2560,bd = 0,highlightthickness = 0,relief = "ridge")
+    canvas = Canvas(root,bg = "#FDFFE8",height = 1080,width = 1920,bd = 0,highlightthickness = 0,relief = "ridge")
 
     canvas.place(x = 0, y = 0) 
     
     canvas.create_text(
-        700.0,
-        95.0,
+        550.0,
+        68.0,
         anchor="nw",
         text="STUDENT MANAGEMENT SYSTEM",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 90 * -1)
+        font=("Bahnschrift SemiBold SemiConden", 60 * -1)
     )
     
     canvas.create_text(
-        1110.0,
-        340.0,
+        824.0,
+        207.0,
         anchor="nw",
         text="Student Details",
         fill="#EF16A5",
-        font=("Bahnschrift SemiBold SemiConden", 55 * -1)
+        font=("Bahnschrift SemiBold SemiConden", 30 * -1)
     )
     
     canvas.create_text(
-        151.0,
-        473.0,
+        120.0,
+        275.0,
         anchor="nw",
         text="Current Course Information",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 30 * -1)
+        font=("Bahnschrift SemiBold SemiConden", 22 * -1)
     )
     canvas.create_text(
-        211.0,
-        686.0,
+        159.0,
+        401.0,
         anchor="nw",
         text="Year",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 25 * -1)
+        font=("Bahnschrift SemiBold SemiConden", 19 * -1)
     )
     canvas.create_text(
-        732.0,
-        589.0,
+        531.0,
+        338.0,
         anchor="nw",
         text="Course",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 25 * -1)
+        font=("Bahnschrift SemiBold SemiConden", 19 * -1)
     )
 
     canvas.create_text(
-        732.0,
-        688.0,
+        531.0,
+        405.0,
         anchor="nw",
         text="Semester",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 25 * -1)
+        font=("Bahnschrift SemiBold SemiConden", 19 * -1)
     )
 
     canvas.create_text(
-        211.0,
-        589.0,
+        159.0,
+        338.0,
         anchor="nw",
         text="Department",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiCondenr", 25 * -1)
+        font=("Bahnschrift SemiBold SemiCondenr", 19 * -1)
     )
 
     canvas.create_text(
-        151.0,
-        800.0,
+        124.0,
+        500.0,
         anchor="nw",
         text="Class Student Information",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 30 * -1)
+        font=("Bahnschrift SemiBold SemiConden", 22 * -1)
     )
     
     canvas.create_text(
-        676.0,
-        1104.0,
+        508.0,
+        666.0,
         anchor="nw",
         text="Date Of Birth             :",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiCondenr", 26 * -1)
+        font=("Bahnschrift SemiBold SemiCondenr", 19 * -1)
     )
 
     canvas.create_text(
-        676.0,
-        1188.0,
+        509.0,
+        724.0,
         anchor="nw",
         text="Phone Number         :",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 26 * -1)
+        font=("Bahnschrift SemiBold SemiConden", 19 * -1)
     )
 
     canvas.create_text(
-        676.0,
-        928.8466796875,
+        508.0,
+        555.0,
         anchor="nw",
         text="Student Name           :",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 26 * -1)
+        font=("Bahnschrift SemiBold SemiConden", 19 * -1)
     )
 
     canvas.create_text(
-        172.0,
-        1188.0,
+        139.0,
+        724.0,
         anchor="nw",
         text="Email                    :",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 26 * -1)
+        font=("Bahnschrift SemiBold SemiConden", 19 * -1)
     )
 
     canvas.create_text(
-        676.0, 
-        1019.0,
+        507.0, 
+        611.0,
         anchor="nw",
         text="Address                     :",
         fill="#000000", 
-        font=("Bahnschrift SemiBold SemiConden", 26 * -1))
+        font=("Bahnschrift SemiBold SemiConden", 19 * -1))
 
     canvas.create_text(
-        172.0,
-        931.0,
+        139.0,
+        556.0,
         anchor="nw",
         text="Student ID             :",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 26 * -1))
+        font=("Bahnschrift SemiBold SemiConden", 19 * -1))
 
     canvas.create_text(
-        172.0,
-        1017.0,
+        139.0,
+        613.0,
         anchor="nw",
         text="Class Division       :",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 26 * -1))
+        font=("Bahnschrift SemiBold SemiConden", 19 * -1))
     
-    canvas.create_text(172.0,1104.0,
+    canvas.create_text(
+        139.0,667.0,
         anchor="nw",
         text="Gender                  :",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 26 * -1))
+        font=("Bahnschrift SemiBold SemiConden", 19 * -1))
     
     canvas.create_text(
-        1328.0,
-        485.0,
+        972.0,
+        280.0,
         anchor="nw",
         text="Search System",
         fill="#000000",
-        font=("Bahnschrift SemiBold SemiConden", 35 * -1))
+        font=("Bahnschrift SemiBold SemiConden", 22 * -1))
 
     
     # Variables
@@ -193,7 +194,7 @@ def Student_Details(root):
                         "School of Design",
                         "Faculty of Engineering","BINUS Business School")
     dep_combo.current(0)
-    canvas.create_window(510.5, 608.0, window=dep_combo, width=300, height=40)
+    canvas.create_window(396.0, 350.0, window=dep_combo, width=216, height=28)
     
     # Course
     course_combo = ttk.Combobox(root,textvariable=var_course,font=Font(family="Bahnschrift SemiCondensed",size=16),state="readonly")
@@ -202,14 +203,14 @@ def Student_Details(root):
                         "Design Communication Visual",
                         "Industrial Engineering","Digital Business")
     course_combo.current(0)
-    canvas.create_window(994.5,608.0, window=course_combo, width=300, height=40)
+    canvas.create_window(744.5,350.0, window=course_combo, width=216, height=28)
     
     
     # Semester
     semester_combo = ttk.Combobox(root,textvariable=var_semester,font=Font(family="Bahnschrift SemiCondensed",size=16),state="readonly")
     semester_combo["values"]=("Select Semester",1,2,3,4,5,6,7,8,9,10)
     semester_combo.current(0)
-    canvas.create_window(994.5,701.0, window=semester_combo, width=300, height=40)
+    canvas.create_window(744.0,416.0, window=semester_combo, width=216, height=28)
     
     # Year
     year_combo = ttk.Combobox(root,textvariable=var_year,font=Font(family="Bahnschrift SemiCondensed",size=16),state="readonly")
@@ -222,7 +223,7 @@ def Student_Details(root):
                         "2025/2026",
                         "2026/2027")
     year_combo.current(0)
-    canvas.create_window(510.5,701.0, window=year_combo, width=300, height=40)   
+    canvas.create_window(396.0,415.0, window=year_combo, width=216, height=28)   
     
     
     # Entry Image
@@ -230,13 +231,13 @@ def Student_Details(root):
     
     
     # Inputan 
-    entry_bg_1 = canvas.create_image(509.0,951.0,image=entry_image)
+    entry_bg_1 = canvas.create_image(393.0,566.0,image=entry_image)
     entry_std_id = Entry(root, textvariable=var_std_id,bd=0,bg="#FDFFE8",fg="#000716",highlightthickness=0, font=Entry_font)
-    entry_std_id.place(x=384.0,y=930.0,width=250.0,height=40.0)
+    entry_std_id.place(x=288.0,y=551.0,width=210.0,height=28.0)
 
-    entry_bg_2 = canvas.create_image(1053.0,951.0,image=entry_image)
+    entry_bg_2 = canvas.create_image(770.0,566.0,image=entry_image)
     entry_std_name = Entry(root,textvariable=var_std_name,bd=0,bg="#FDFFE8",fg="#000716", highlightthickness=0,font=Entry_font)
-    entry_std_name.place(x=928.0, y=930.0, width=250.0, height=40.0)
+    entry_std_name.place(x=665.0, y=551.0, width=210.0, height=28.0)
 
     # entry_bg_3 = canvas.create_image(509.0,1119.0,image=entry_image)
     # entry_gender = Entry(root,textvariable=var_gender,bd=0,bg="#FDFFE8",fg="#000716",highlightthickness=0, font=Entry_font)
@@ -245,7 +246,7 @@ def Student_Details(root):
     gender_combo = ttk.Combobox(root,textvariable=var_gender,font=Font(family="Bahnschrift SemiCondensed",size=16),state="readonly")
     gender_combo["values"]=("Male","Female","Other")
     gender_combo.current(0)
-    canvas.create_window(509.0,1125.0, window=gender_combo, width=250, height=40.)
+    canvas.create_window(393.0,678.0, window=gender_combo, width=210, height=28.0)
     
     
     # entry_bg_4 = canvas.create_image(509.0,1036.0,image=entry_image)
@@ -255,34 +256,34 @@ def Student_Details(root):
     classdiv_combo = ttk.Combobox(root,textvariable=var_classdiv,font=Font(family="Bahnschrift SemiCondensed",size=16),state="readonly")
     classdiv_combo["values"]=("Select Class Division","LA","LB","LC","LD","LE")
     classdiv_combo.current(0)
-    canvas.create_window(509.0,1037.0, window=classdiv_combo, width=250, height=40.)
+    canvas.create_window(393.0,622.0, window=classdiv_combo, width=210, height=28.0)
     
-    entry_bg_5 = canvas.create_image(1053.0,1119.0,image=entry_image)
+    entry_bg_5 = canvas.create_image(770.0,678.0,image=entry_image)
     entry_dob = Entry(root,bd=0,textvariable=var_dob,bg="#FDFFE8",fg="#000716",highlightthickness=0,font=Entry_font )
-    entry_dob.place(x=928.0,y=1099.0,width=250.0,height=39.0)
+    entry_dob.place(x=665.0,y=663.0,width=210.0,height=28.0)
 
-    entry_bg_6 = canvas.create_image( 1053.0,1205.0,image=entry_image)
+    entry_bg_6 = canvas.create_image( 770.0,735.0,image=entry_image)
     entry_phone = Entry(root,bd=0, textvariable=var_phone,bg="#FDFFE8",fg="#000716",highlightthickness=0,font=Entry_font)
-    entry_phone.place(x=928.0,y=1185.0,width=250.0, height=39.0)
+    entry_phone.place(x=665.0,y=720.0,width=210.0, height=28.0)
 
-    entry_bg_7 = canvas.create_image(509.0,1205.0,image=entry_image)
+    entry_bg_7 = canvas.create_image(393.0,735.0,image=entry_image)
     entry_email = Entry(root,bd=0,textvariable=var_email,bg="#FDFFE8",fg="#000716",highlightthickness=0, font=Entry_font)
-    entry_email.place(x=384.0,y=1185.0,width=250.0,height=39.0)
-
-    entry_bg_8 = canvas.create_image(1053.0,1035.0,image=entry_image) 
+    entry_email.place(x=288.0,y=720.0,width=210.0,height=28.0)
+#
+    entry_bg_8 = canvas.create_image(770.0,622.0,image=entry_image) 
     entry_addr = Entry(root,textvariable=var_address,bd=0,bg="#FDFFE8",fg="#000716",highlightthickness=0,font=Entry_font)
-    entry_addr.place( x=928.0,y=1015.0,width=250.0,height=39.0)
+    entry_addr.place( x=665.0,y=607.0,width=210.0,height=28.0)
 
     style = ttk.Style()
-    style.configure("Custom.TRadiobutton", background="#FDFFE8",font=("Bahnschrift SemiCondensed", 16))
+    style.configure("Custom.TRadiobutton", background="#FDFFE8",font=("Bahnschrift SemiCondensed", 14))
 
 
     # Radio Button
     var_radio1=StringVar()
     radiobutton_1 =ttk.Radiobutton(root, variable=var_radio1,text="Take Photo Sample", value="Yes",style="Custom.TRadiobutton")
-    radiobutton_1.place(x=170.0,y=1260.0)
+    radiobutton_1.place(x=139.0,y=790.0)
     radiobutton_2=ttk.Radiobutton(root,variable=var_radio1,text="No Photo Sample",value="None",style="Custom.TRadiobutton")
-    radiobutton_2.place(x=450.0,y=1260.0)
+    radiobutton_2.place(x=400.0,y=790.0)
     
     
     
@@ -862,27 +863,27 @@ def Student_Details(root):
     # Button
     button_image_1 = PhotoImage(file=to_images("button_1.png"))
     button_add = Button(root,image=button_image_1,borderwidth=3,highlightthickness=0, command=AddData, relief="flat")
-    button_add.place(x=167.0, y=1305.0, width=228.0, height=50.0)
+    button_add.place(x=139.0, y=828.0, width=170.0, height=44.0)
 
     button_image_2 = PhotoImage(file=to_images("button_2.png"))
     button_takePhoto = Button(root,image=button_image_2, borderwidth=3,highlightthickness=0, command=generateDataset, relief="flat")
-    button_takePhoto.place(x=167.0,y=1373.0, width=486.0,  height=50.0)
+    button_takePhoto.place(x=139.0,y=889.0, width=359.0,  height=44.0)
 
     button_image_3 = PhotoImage(file=to_images("button_3.png"))
     button_updatePhoto = Button(root,image=button_image_3,borderwidth=3,highlightthickness=0,command=lambda: print("button_3 clicked"),relief="flat")
-    button_updatePhoto.place(x=689.0,y=1373.0,width=486.0, height=50.0 )
+    button_updatePhoto.place(x=517.0,y=889.0,width=358.0, height=44.0 )
 
     button_image_4 = PhotoImage(file=to_images("button_4.png"))
     button_updateData = Button(root, image=button_image_4,borderwidth=3, highlightthickness=0, command=updateData, relief="flat")
-    button_updateData.place(x=425.0, y=1305.0, width=228.0,  height=50.0)
+    button_updateData.place(x=328.0, y=828.0, width=170.0,  height=44.0)
 
     button_image_5 = PhotoImage(file=to_images("button_5.png"))
     button_delete = Button(root, image=button_image_5,  borderwidth=3,  highlightthickness=0,  command=deleteData,  relief="flat")
-    button_delete.place(x=689.0,y=1305.0, width=228.0,  height=50.0)
+    button_delete.place(x=517.0,y=830.0, width=170.0,  height=44.0)
 
     button_image_6 = PhotoImage( file=to_images("button_6.png"))
     button_reset = Button(root,  image=button_image_6, borderwidth=3, highlightthickness=0, command=resetData,  relief="flat")
-    button_reset.place(x=947.0, y=1305.0, width=228.0,  height=50.0)
+    button_reset.place(x=705.0, y=831.0, width=170.0,  height=44.0)
 
 
 
@@ -890,57 +891,60 @@ def Student_Details(root):
     
     # Logo
     image_image_logo = PhotoImage(file=to_images("image_logo.png"))
-    image_3 = canvas.create_image(2351.0,  170.0,image=image_image_logo)
+    image_3 = canvas.create_image(1688.0,  120.0,image=image_image_logo)
     
-    canvas.create_rectangle( 2121.0,  34.0,  2129.0, 242.0, fill="#EF16A5",outline="")
-
-    
-    canvas.create_rectangle(76.0,373.0,81.0,1523.0,fill="#000000",outline="")
-
-    canvas.create_rectangle(78.0,373.0,1030.0,379.0,fill="#000000",outline="")
-
-    canvas.create_rectangle(76.0,1527.0,1252.0,1523.0,fill="#000000",outline="")
-
-    canvas.create_rectangle(1248.0,415.0,1252.0,1527.0,fill="#000000",outline="")
+    canvas.create_rectangle(1500.0,  19.0,  1508.0, 179.0, fill="#EF16A5",outline="")
 
     
-    canvas.create_rectangle(141.0,842.0,143.0,1455.0,fill="#000000",outline="")
+    canvas.create_rectangle(76.0,222.0,80.0,1023.0,fill="#000000",outline="")
 
-    canvas.create_rectangle(141.0,1452.0,1205.0,1457.0,fill="#000000",outline="")
+    canvas.create_rectangle(76.0,222.0,792.0,226.0,fill="#000000",outline="")
 
-    canvas.create_rectangle(1204.0,826.0,1206.0,1455.0,fill="#000000",outline="")
+    canvas.create_rectangle(76.0,1021.0,917.0,1025.0,fill="#000000",outline="")
 
-    canvas.create_rectangle(523.0,825.0,1206.0,827.0,fill="#000000",outline="")
-    
+    canvas.create_rectangle(915.0,259.0,919.0,1025.0,fill="#000000",outline="")
 
-    canvas.create_rectangle(140.0,513.0,143.0,757.0,fill="#F017A6",outline="")
 
-    canvas.create_rectangle(142.0,755.0,1206.0,757.0,fill="#F017A6",outline="")
 
-    canvas.create_rectangle(1204.0,498.0,1206.0,757.0,fill="#F017A6",outline="")
+    canvas.create_rectangle(115.0,529.0,117.0,976.0,fill="#000000",outline="")
 
-    canvas.create_rectangle(538.0,497.0,1205.0,500.0,fill="#F017A6",outline="")
-    
+    canvas.create_rectangle(115.0,975.0,900.0000180000425,977.0,fill="#000000",outline="")
 
-    canvas.create_rectangle(1278.0,416.0,1282.0,1526.0,fill="#000000",outline="")
+    canvas.create_rectangle(898.0,514.0, 900.0, 976.0, fill="#000000",outline="")
 
-    canvas.create_rectangle(1278.0,1524.0,2501.0,1528.0,fill="#000000",outline="")
+    canvas.create_rectangle( 371.0,514.0,900.0,516.0, fill="#000000",outline="")
 
-    canvas.create_rectangle(2495.0, 380.0,2501.0, 1527.0,fill="#000000",outline="")
 
-    canvas.create_rectangle(1527.0,376.0,2501.0,382.0,fill="#000000",outline="")
 
-    
-    
-    canvas.create_rectangle(1301.0,504.0,1303.0,656.0,fill="#25B0FF",outline="")
+    canvas.create_rectangle(113.0,306.0,115.0,480.0,fill="#F017A6",outline="")
 
-    canvas.create_rectangle(1302.0,654.0,2475.0,656.0,fill="#25B0FF",outline="")
+    canvas.create_rectangle(115.0,478.0,900.0,480.0, fill="#F017A6",outline="")
 
-    canvas.create_rectangle(1301.0,504.0,1316.0,506.0,fill="#25B0FF",outline="")
+    canvas.create_rectangle( 898.0, 291.0,900.0,480.0,fill="#F017A6",outline="")
 
-    canvas.create_rectangle(2472.0,507.0,2475.0,656.0,fill="#25B0FF",outline="")
+    canvas.create_rectangle(371.0,290.0,900.0,292.0,fill="#F017A6",outline="")
 
-    canvas.create_rectangle(1577.0,505.0,2475.0,507.0,fill="#25B0FF",outline="")
+
+
+    canvas.create_rectangle(929.0,259.0,933.0,1026.0, fill="#000000",outline="")
+
+    canvas.create_rectangle(930.0, 1022.0,1848.0,1026.0,fill="#000000",outline="")
+
+    canvas.create_rectangle(1845.0,222.0,1850.0,1026.0,fill="#000000",outline="")
+
+    canvas.create_rectangle(1058.0,226.0,1848.0,222.0,fill="#000000",outline="")
+
+
+
+    canvas.create_rectangle(954.0,294.0,956.0,385.0,fill="#25B0FF",outline="")
+
+    canvas.create_rectangle(954.0,383.0,1822.0,385.0,fill="#25B0FF",outline="")
+
+    canvas.create_rectangle(954.0,295.0,965.0,293.0,fill="#25B0FF",outline="")
+
+    canvas.create_rectangle(1820.0,294.0,1822.0,385.0,fill="#25B0FF",outline="")
+
+    canvas.create_rectangle(1114.0,294.0,1822.0,296.0,fill="#25B0FF",outline="")
 
 
 
@@ -950,25 +954,25 @@ def Student_Details(root):
     search_combo = ttk.Combobox(root,font=Font(family="Bahnschrift SemiCondensed",size=16),state="readonly")
     search_combo["values"]=("Select","Student ID","Phone Number")
     search_combo.current(0)
-    canvas.create_window(1610.0,590.0, window=search_combo, width=270, height=45)
+    canvas.create_window(1205.0,341.0, window=search_combo, width=190, height=35)
     
     
     entry_image_9 = PhotoImage(file=to_images("entry_9.png"))
-    entry_bg_9 = canvas.create_image(1904.5,591.0,image=entry_image_9)
+    entry_bg_9 = canvas.create_image(1428.0,341.0,image=entry_image_9)
     entry_search = Entry(root,bd=0,bg="#FDFFE8",fg="#000716",highlightthickness=0,font=Entry_font)
-    entry_search.place(x=1780.0,y=571.0,width=250.0,height=40.0)
+    entry_search.place(x=1332.0,y=330.0,width=195.0,height=20.0)
     
-    canvas.create_text(1315.0,  573.0, anchor="nw",  text="Search by :", fill="#000000",   font=("Bahnschrift SemiBold SemiConden", 30 * -1))
+    canvas.create_text(972.0,  325.0, anchor="nw",  text="Search by :", fill="#000000",   font=("Bahnschrift SemiBold SemiConden", 25 * -1))
 
     image_image_1 = PhotoImage(file=to_images("image_1.png"))
-    image_1 = canvas.create_image(  2150.0, 589.0,  image=image_image_1)
+    image_1 = canvas.create_image(1610.0, 341.0,  image=image_image_1)
     canvas.tag_bind(image_1, '<Enter>', lambda event, img=image_1 :on_image_enter(img))
     canvas.tag_bind(image_1, '<Leave>', lambda event, img=image_1 :on_image_leave(img))
     canvas.tag_bind(image_1, '<Button-1>', lambda event, img=image_1: on_image_click(img))   
 
 
     image_image_2 = PhotoImage(file=to_images("image_2.png"))
-    image_2 = canvas.create_image(2337.0,  589.0, image=image_image_2)
+    image_2 = canvas.create_image(1744.0,  341.0, image=image_image_2)
     canvas.tag_bind(image_2, '<Enter>', lambda event, img=image_2 :on_image_enter(img))
     canvas.tag_bind(image_2, '<Leave>', lambda event, img=image_2 :on_image_leave(img))
     canvas.tag_bind(image_2, '<Button-1>', lambda event, img=image_2: on_image_click(img))      
@@ -1017,7 +1021,7 @@ def Student_Details(root):
             
     # ------ Table Frame -------
     table_frame=Frame(root,bd=2,bg="#FDFFE8",relief="solid")
-    table_frame.place(x=1300.0,y=680.0,width=1175,height=777)
+    table_frame.place(x=953.0,y=410.0,width=869,height=567)
     
     scroll_x=ttk.Scrollbar(table_frame,orient="horizontal")
     scroll_y=ttk.Scrollbar(table_frame,orient="vertical")
@@ -1027,8 +1031,8 @@ def Student_Details(root):
     
     student_table=ttk.Treeview(table_frame,column=columns,xscrollcommand=scroll_x.set,yscrollcommand=scroll_y.set)
     
-    style.configure("Treeview", font=("Bahnschrift SemiLight", 14))
-    style.configure("Treeview.Heading", font=("Bahnschrift SemiCondensed", 16)) 
+    style.configure("Treeview", font=("Bahnschrift SemiLight", 12))
+    style.configure("Treeview.Heading", font=("Bahnschrift SemiCondensed", 14)) 
 
     
     scroll_x.pack(side="bottom",fill="x")
@@ -1051,7 +1055,7 @@ def Student_Details(root):
     student_table["show"]="headings"
     
     for i in columns:
-        student_table.column(i,minwidth=150,width=250)
+        student_table.column(i,minwidth=150,width=230)
     
     student_table.pack(fill="both",expand=True)
     student_table.bind("<ButtonRelease>",getCursor)

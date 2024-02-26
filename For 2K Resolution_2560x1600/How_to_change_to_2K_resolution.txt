@@ -1,0 +1,2 @@
+1. Extract Images.rar and Replace the old Images folder with the newly extracted Images folder.
+2. Replace all .py files, such as Main.py, TakeAttendanceStudents.py, HelpDesk.py, etc.

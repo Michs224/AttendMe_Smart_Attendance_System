@@ -4,23 +4,24 @@ import os
 from StudentDetails import Student_Details
 # from TakeAttendanceStudents import Take_Attendance_Students
 from HelpDesk import Help_Desk
-import cv2
+# import cv2
 
 class LibraLink:
     
     def __init__(self,root):
         self.window=root
         # self.window=Tk()
-        self.window.geometry("2560x1600+0+0")
+        self.window.geometry("1920x1080")
         self.window.title("Libra Link: Smart Attendance System with Book Recommender")
         self.window.configure(bg = "#FDFFE8")
-        self.window.overrideredirect(True)
-
+        # self.window.overrideredirect(True)
+        self.window.resizable(False, False)
+        
         self.canvas = Canvas(
             self.window,
             bg = "#FDFFE8",
-            height = 1600,
-            width = 2560,
+            height = 1080,
+            width = 1920,
             bd = 0,
             highlightthickness = 0,
             relief = "ridge"
@@ -30,7 +31,7 @@ class LibraLink:
         
         # Image 1
         self.image_image_1 = PhotoImage(file=self.to_images("image_1.png"))
-        self.image_1 = self.canvas.create_image(433.0,723.0,image=self.image_image_1)
+        self.image_1 = self.canvas.create_image(334.0,452.0,image=self.image_image_1)
 
         self.canvas.tag_bind(self.image_1, '<Enter>', lambda event, img=self.image_1 :self.on_image_enter(img))
         self.canvas.tag_bind(self.image_1, '<Leave>', lambda event, img=self.image_1 :self.on_image_leave(img))
@@ -38,7 +39,7 @@ class LibraLink:
 
         # Image 2 Photo Data Button
         self.image_image_2 = PhotoImage(file=self.to_images("image_3.png"))
-        self.image_2 = self.canvas.create_image(1091.0,723.0,image=self.image_image_2)
+        self.image_2 = self.canvas.create_image(797.0,452.0,image=self.image_image_2)
         
         self.canvas.tag_bind(self.image_2, '<Enter>', lambda event, img=self.image_2 :self.on_image_enter(img))
         self.canvas.tag_bind(self.image_2, '<Leave>', lambda event, img=self.image_2 :self.on_image_leave(img))
@@ -46,7 +47,7 @@ class LibraLink:
         
         # Image 3
         self.image_image_3 = PhotoImage(file=self.to_images("image_4.png"))
-        self.image_3 = self.canvas.create_image(1749.0,720.0,image=self.image_image_3)
+        self.image_3 = self.canvas.create_image(1258.0,452.0,image=self.image_image_3)
         
         self.canvas.tag_bind(self.image_3, '<Enter>', lambda event, img=self.image_3 :self.on_image_enter(img))
         self.canvas.tag_bind(self.image_3, '<Leave>', lambda event, img=self.image_3 :self.on_image_leave(img))
@@ -54,28 +55,28 @@ class LibraLink:
 
         # Image 4
         self.image_image_4 = PhotoImage(file=self.to_images("image_6.png"))
-        self.image_4 = self.canvas.create_image(433.0,1272.0,image=self.image_image_4)
+        self.image_4 = self.canvas.create_image(334.0,767.0,image=self.image_image_4)
         self.canvas.tag_bind(self.image_4, '<Enter>', lambda event, img=self.image_4 :self.on_image_enter(img))
         self.canvas.tag_bind(self.image_4, '<Leave>', lambda event, img=self.image_4 :self.on_image_leave(img))
         self.canvas.tag_bind(self.image_4, '<Button-1>', lambda event, img=self.image_4: self.on_image_click(img))
         
         # Image 5
         self.image_image_5 = PhotoImage(file=self.to_images("image_2.png"))
-        self.image_5 = self.canvas.create_image(1091.0,1272.0,image=self.image_image_5)
+        self.image_5 = self.canvas.create_image(796.0,767.0,image=self.image_image_5)
         self.canvas.tag_bind(self.image_5, '<Enter>', lambda event, img=self.image_5 :self.on_image_enter(img))
         self.canvas.tag_bind(self.image_5, '<Leave>', lambda event, img=self.image_5 :self.on_image_leave(img))
         self.canvas.tag_bind(self.image_5, '<Button-1>', lambda event, img=self.image_5: self.on_image_click(img))
 
         # Image 6 exit button
         self.image_image_6 = PhotoImage(file=self.to_images("image_7.png"))
-        self.image_6 = self.canvas.create_image(1749.0,1272.0,image=self.image_image_6)
+        self.image_6 = self.canvas.create_image(1258.0,767.0,image=self.image_image_6)
         self.canvas.tag_bind(self.image_6, '<Enter>', lambda event, img=self.image_6 :self.on_image_enter(img))
         self.canvas.tag_bind(self.image_6, '<Leave>', lambda event, img=self.image_6 :self.on_image_leave(img))
         self.canvas.tag_bind(self.image_6, '<Button-1>', lambda event, img=self.image_6: self.on_image_click(img))
 
         # Image 7
         self.image_image_7 = PhotoImage(file=self.to_images("image_5.png"))
-        self.image_7 = self.canvas.create_image(2258.404296875,996.0,image=self.image_image_7)
+        self.image_7 = self.canvas.create_image(1658.0,609.0,image=self.image_image_7)
         
         self.canvas.tag_bind(self.image_7, '<Enter>', lambda event, img=self.image_7 :self.on_image_enter(img))
         self.canvas.tag_bind(self.image_7, '<Leave>', lambda event, img=self.image_7 :self.on_image_leave(img))
@@ -83,21 +84,21 @@ class LibraLink:
 
         # Image 8
         self.image_image_8 = PhotoImage(file=self.to_images("image_logo.png"))
-        image_8 = self.canvas.create_image(2351.0,170.0,image=self.image_image_8)
+        image_8 = self.canvas.create_image(1694.0,150.0,image=self.image_image_8)
 
         # Line sebelah logo
-        self.canvas.create_rectangle(2121.0,34.0,2129.0,242.0,fill="#EF16A5",outline="")
+        self.canvas.create_rectangle(1500.0,40.0,1509.0,200.0,fill="#EF16A5",outline="")
 
         # Text Dashboard
-        self.canvas.create_text(1462.0,95.0,anchor="nw",text="DASHBOARD",fill="#000000",font=("RobotoRoman Bold", 90 * -1))
+        self.canvas.create_text(950.0,83.0,anchor="nw",text="DASHBOARD",fill="#000000",font=("RobotoRoman Bold", 60 * -1))
 
         # Image 9
         self.image_image_9 = PhotoImage(file=self.to_images("image_9.png"))
-        image_9 = self.canvas.create_image(700.0,245.0,image=self.image_image_9)
+        image_9 = self.canvas.create_image(424.0,118.0,image=self.image_image_9)
         
         # Image 10
         self.image_image_10=PhotoImage(file=self.to_images("image_10.png"))
-        self.image_10=self.canvas.create_image(1227.0,144.0,image=self.image_image_10)
+        self.image_10=self.canvas.create_image(719.0,62.0,image=self.image_image_10)
         self.canvas.tag_bind(self.image_10, '<Enter>', lambda event, img=self.image_10 :self.on_image_enter(img))
         self.canvas.tag_bind(self.image_10, '<Leave>', lambda event, img=self.image_10:self.on_image_leave(img))
         self.canvas.tag_bind(self.image_10, '<Button-1>', lambda event, img=self.image_10: self.on_image_click(img))
@@ -189,9 +190,10 @@ class LibraLink:
         
     def to_images(self,str):
         return Path(__file__).resolve().parent /"Images/frame_1" / str
-
+    
 if __name__=="__main__":
     root=Tk()
     App=LibraLink(root)
+    
     # App.window.overrideredirect(True)
     App.window.mainloop()    

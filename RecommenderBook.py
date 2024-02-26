@@ -18,13 +18,13 @@ def relative_to_assets(str):
 
 def RecommmenderBook(root):
     # root = Tk()
-    root.geometry("2560x1600")
+    root.geometry("1920x1080")
     root.configure(bg = "#FDFFE8")
     root.title("LibraLink: Recommender Book")
 
     Entry_font=Font(family="Bahnschrift SemiLight",size=20)
 
-    canvas = Canvas(root,bg = "#FDFFE8",height = 1600,width = 2560,bd = 0,highlightthickness = 0,relief = "ridge")
+    canvas = Canvas(root,bg = "#FDFFE8",height = 1080,width = 1920,bd = 0,highlightthickness = 0,relief = "ridge")
 
     canvas.place(x = 0, y = 0)
     
@@ -36,17 +36,17 @@ def RecommmenderBook(root):
 
     
     image_image_1 = PhotoImage(file=relative_to_assets("image_logo.png"))
-    image_1 = canvas.create_image(2351.0, 170.0,image=image_image_1)
+    image_1 = canvas.create_image(1694.0, 150.0,image=image_image_1)
 
-    canvas.create_rectangle(2121.0,34.0,2129.0,242.0,fill="#EF16A5",outline="")
+    canvas.create_rectangle(1499.0,40.0,1509.0,200.0,fill="#EF16A5",outline="")
 
     image_image_2 = PhotoImage(file=relative_to_assets("image_2.png"))
-    image_2 = canvas.create_image(1280.0,446.0,image=image_image_2)
+    image_2 = canvas.create_image(960.0,373.0,image=image_image_2)
 
-    canvas.create_text(1175.0,85.0,anchor="nw",text="BOOK RECOMMENDER",fill="#000000",font=("Bahnschrift SemiBold SemiConden", 100 * -1))
+    canvas.create_text(721.0,89.0,anchor="nw",text="BOOK RECOMMENDER",fill="#000000",font=("Bahnschrift SemiBold SemiConden", 70 * -1))
 
     entry_image_1 = PhotoImage(file=relative_to_assets("entry_1.png"))
-    entry_bg_1 = canvas.create_image(1198.5,446.5,image=entry_image_1,)
+    entry_bg_1 = canvas.create_image(941.0,373.5,image=entry_image_1,)
     # entry_1 = Entry(root,bd=0,bg="#FFFFFF",fg="#000716",highlightthickness=0,font=Entry_font)
     # entry_1.place(x=702.0,y=420.0,width=993.0,height=53.0)
     
@@ -59,24 +59,24 @@ def RecommmenderBook(root):
     books=["Select Title"]+list(book_names)
     book_combo["values"]=tuple(books)
     book_combo.current(0)
-    canvas.create_window(1199.5, 447.0, window=book_combo, width=1028.0, height=71.0)
+    canvas.create_window(941.0, 373.5, window=book_combo, width=948.0, height=63.0)
     
 
     image_image_3 = PhotoImage(file=relative_to_assets("image_3.png"))
-    image_3 = canvas.create_image(2127.0,447.0,image=image_image_3)
+    image_3 = canvas.create_image(1594.0,375.0,image=image_image_3)
     canvas.tag_bind(image_3, '<Enter>', lambda event, img=image_3 :on_image_enter(img))
     canvas.tag_bind(image_3, '<Leave>', lambda event, img=image_3:on_image_leave(img))
     canvas.tag_bind(image_3, '<Button-1>', lambda event, img=image_3: on_image_click(img))
 
-    canvas.create_text(226.0,420.0,anchor="nw",text="Enter Book Title",fill="#000000",font=("Bahnschrift SemiBold SemiConden", 45 * -1))
+    canvas.create_text(194.0,350.0,anchor="nw",text="Enter Book Title",fill="#000000",font=("Bahnschrift SemiBold SemiConden", 35 * -1))
     
     # canvas.create_rectangle(97.0,586.0,2462.0,684.0,fill="#EFE715",outline="")
     image_image_4 = PhotoImage(file=relative_to_assets("image_4.png"))
-    image_4 = canvas.create_image(1279.0,620.0,image=image_image_4)
+    image_4 = canvas.create_image(960.0,485.0,image=image_image_4)
     
     # canvas.create_rectangle(97.0,684.0,2462.0,1480.0,fill="#FFFFFF",outline="")
 
-    canvas.create_text(1025.0,585.0,anchor="nw",text="Book Recommendations:",fill="#000000",font=("Bahnschrift SemiBold SemiConden", 50 * -1))
+    canvas.create_text(765.0,458.0,anchor="nw",text="Book Recommendations:",fill="#000000",font=("Bahnschrift SemiBold SemiConden", 40 * -1))
 
     
     # table_canvas = Canvas(root, bg="#FDFFE8", highlightthickness=0)
@@ -174,7 +174,7 @@ def RecommmenderBook(root):
 
 
     scroll_frame = Frame(root)
-    scroll_frame.place(x=94.0, y=667.0, width=2371.0, height=820)
+    scroll_frame.place(x=93.0, y=520.0, width=1734.0, height=480)
 
     scrollbar_x = Scrollbar(scroll_frame, orient="horizontal")
     scrollbar_x.pack(side="bottom", fill="x")
@@ -194,16 +194,16 @@ def RecommmenderBook(root):
         for widget in book_canvas.winfo_children():
             widget.destroy()
 
-        x_offset = 70
+        x_offset = 50
         for i, ((book, rack_code), url) in enumerate(book_info):
             try:
                 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
-                response = requests.get(url, headers=headers)
+                response = requests.get(url, headers=headers,timeout=10)
                 response.raise_for_status() 
                 if response.status_code == 200:
                     img_data = BytesIO(response.content)
                     img = PILImage.open(img_data)
-                    img = img.resize((300, 500), PILImage.LANCZOS)
+                    img = img.resize((150, 250), PILImage.LANCZOS)
                     tk_img = ImageTk.PhotoImage(img)
 
                     frame = Frame(book_canvas, bg="#FDFFE8", bd=10, relief="raised")
@@ -211,14 +211,14 @@ def RecommmenderBook(root):
                     label_img.image = tk_img
                     label_img.pack()
 
-                    label_title = Label(frame, text=book, font=("Bahnschrift SemiLight", 20), bg="#FDFFE8", wraplength=300)
+                    label_title = Label(frame, text=book, font=("Bahnschrift SemiLight", 16), bg="#FDFFE8", wraplength=250)
                     label_title.pack()
 
-                    label_rack = Label(frame, text=f"Shelf: {rack_code.capitalize()}", font=("Bahnschrift SemiLight", 18), bg="#FDFFE8")
+                    label_rack = Label(frame, text=f"Shelf: {rack_code.capitalize()}", font=("Bahnschrift SemiLight", 14), bg="#FDFFE8")
                     label_rack.pack()
 
-                    book_canvas.create_window(x_offset, 80, anchor="nw", window=frame)
-                    x_offset += 400  # Space between each book display
+                    book_canvas.create_window(x_offset, 40, anchor="nw", window=frame)
+                    x_offset += 300  # Space each book
 
                     image_references.append(tk_img)
                 else:
@@ -228,7 +228,7 @@ def RecommmenderBook(root):
             except Exception as e:
                 print(f"Error loading image from {url}: {e}")
 
-        book_canvas.config(scrollregion=(0, 0, x_offset, 600))
+        book_canvas.config(scrollregion=(0, 0, x_offset, 500))
 
 
     
